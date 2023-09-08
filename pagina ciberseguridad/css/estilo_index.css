@@ -1,0 +1,139 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    overflow: hidden;
+}
+.bloque{
+    width: 100vw;
+    padding-top: 50px;
+    flex-shrink: 0;
+    height: 100vh;
+}
+
+/*MENU DE NAVEGACION*/
+
+header{
+    position: fixed;
+    bottom: 0;
+    padding: 10px 0;
+    width: 100%;
+    background-image: linear-gradient(to right, rgb(166, 233, 177), rgb(58, 158, 133), rgb(43, 212, 128));
+    text-align: center;
+}
+
+header a{
+    display: inline-block;
+    margin: 0, 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.selected{
+    color: rgb(255, 255, 255);
+    transition: .3s;
+
+    
+}
+
+header nav span{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: white;
+}
+header span{
+    display: inline-block;
+}
+/*Pagina Inicicio*/
+
+#intro{
+    background-image: url();
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#intro .contenido h2{
+    background-image: url();
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes aparecer {
+    0%{
+        opacity: 0;
+        top: 50px;
+    }
+    100%{
+        opacity: 1;
+        top: 0px;
+    }
+    
+}
+
+/*Pagina Delitos*/
+
+#delitos{
+    background-color: white;
+}
+
+#delitos{
+    text-align: center;
+    margin-bottom: 20px;
+}
+#delitos .contenido{
+    max-width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#delitos .contenido .delito1{
+    background-image: url();
+}
+
+#delitos .contenido .delito2{
+    background-image: url();
+}
+
+#delitos .contenido .delito3{
+    background-image: url();
+}
+
+#delitos .contenido .delito4{
+    background-image: url();
+}
+
+#delitos .contenido .delito5{
+    background-image: url();
+}
+
+/*pagina tips*/
+
+#tips{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(transparent, rgb(136, 180, 164));
+    
+}

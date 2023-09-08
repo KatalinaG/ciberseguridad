@@ -1,0 +1,509 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Configure para indicarle al navegar que renderice elementos HTML 5 como un bloque*/
+
+header{
+    max-width: 100%;
+}
+footer,
+section,
+aside,
+nav,
+article {
+    display:block;
+
+}
+
+/* Configuracion general*/
+body{
+    padding: 22px 0;
+    max-width: 1000%;
+    font-family: 'Montserrat', sans-serif;
+    background: rgb(223, 230, 224);
+    display: inline-block;
+}
+h1,
+h2{
+    font-size: 28px;
+    line-height: 44px;
+    padding: 22px 0;
+}
+h3{
+    font-size: 18px;
+    line-height: 22px;
+    padding: 11px 0;
+}
+p{
+    padding-bottom: 22px;
+}
+/*ENCABEZADO*/
+
+.encabezado {
+    width: 100%;
+    align-items: center;
+    background: #7ac287;
+    color: white;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    top: 0;
+}
+.logo{
+    width: 70px;
+    height: 70px;
+    margin-right: 70px;
+    margin-left: 30px;
+}
+.menu__encabezado {
+    margin-right: 30px;
+    position: relative;
+
+}
+
+.menu__encabezado ul{
+    display: none;
+    list-style: none;
+    margin-top: 130px;
+    z-index: 4;
+    padding: 5px;
+    position: absolute;
+    width: 70px;
+    text-align: start;
+}
+
+.menu__encabezado:hover ul,
+ul:hover{
+    display: block;
+}   
+
+.menu__encabezado li {
+    margin: 10px -30px;
+}
+
+.menu__encabezado li a {
+    color: #f0e6e6;
+    text-decoration: none;      
+}
+
+.menu__encabezado li a:hover {
+    width: 100%;
+    font-family:'Montserrat', sans-serif;
+    color: #29a13d;
+    transition: all .3s; 
+}
+
+.menu__encabezado--inicio {
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+   
+}
+.menu__encabezado--inicio img {
+    margin-right: 8px;
+    width: 40px;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: transform .2s;
+}
+
+.menu__encabezado--inicio img:hover{
+
+    transform: scale(1.5); 
+}
+
+/*Menu navegacion*/
+
+nav{
+    margin-top: 140px;
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    width: 100%;
+}
+.navegacion{
+    display:inline-block;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(131, 124, 120);
+    display: inline-block;
+}
+.navegacion ul{
+    list-style: none;
+}
+.menu>li{
+    position: relative;
+    display: inline-block;
+}
+.menu>li>a{
+    display: block;
+    padding: 10px 40px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family:'Montserrat', sans-serif;
+    text-decoration: none;
+    text-decoration: double;
+    align-content: center;
+
+}
+.navegacion ul{
+    list-style: none;
+}
+menu>li{
+    position: relative;
+}
+.menu>li>a{
+    display: block;
+    padding: 10px 40px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.menu li a:hover{
+    color: #4f935a;
+    transition: all .3s;
+}
+
+/*SUB MENU*/
+
+.submenu{
+    position: absolute;
+    width: 120px;
+    visibility: hidden;
+    opacity: 90%;
+    transition: opacity 1.5s;
+    background: linear-gradient(to bottom, #a4bdaa,#98ef91);
+    align-content: center;
+    border-radius: 5px;
+
+}
+
+.submenu li a{
+    display: block;
+    padding: 10px;
+    color: #ffffff;
+    text-decoration: none;
+}
+.menu li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+}
+/*BANNER*/
+#banner{
+    position: relative;
+    top: 7px;
+    margin: auto;
+    width: 80%;
+}
+.contenedor-slider{
+    margin: auto;
+    position: relative;
+    top: 60px;
+    height: 270px;
+    overflow: hidden;
+    box-shadow: 0 0 0 10px rgb(60, 62, 63), 0 15px 50px;
+    border-radius: 5px;
+}
+.slider{
+    width: 800%;
+    height: 270px;
+    display: flex;
+}
+.slider__section{
+    width: 100%;
+}
+.slider__img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.btn-prev,
+.btn-next{
+    width: 40px;
+    height: 40px;
+    background: rgba(76, 73, 73, 0.7);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 40px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50px;
+    font-family: monospace;
+    cursor: pointer;
+}
+.btn-prev:hover,
+.btn-next:hover{
+    background: white;
+}
+.btn-prev{
+    left: 10px;
+}
+.btn-next{
+    right: 10px;
+}
+.informacion{
+    padding-top: 100px;
+    margin: 80px;
+    text-align: justify;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-style:oblique
+}
+
+/*------------------------------
+  DISEÑO DEL ÁREA DE CONTENIDO Y BARRA LATERAL
+------------------------------*/
+
+#content {
+    display: table;
+    margin:0 140px 0 240px;
+    padding: 70px;
+}
+
+#mainContent {
+    display: table-cell;
+    width: 620px;
+    padding-right: 22px;
+}
+
+aside {
+    display: table-cell;
+    width: 300px;
+}
+
+
+/*------------------------------
+    PUBLICACION  EN EL BLOG
+------------------------------*/
+
+.blogPost header p,
+.blogPost header p a {
+    font-size: 14px;
+    font-style: italic;
+    color: #777;
+}
+
+.blogPost header p a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+.blogPost div {
+    /* El recuento de columnas  */
+    column-count: 2;
+    column-count: 2;
+    /* El espacio entre columnas  */
+    column-gap: 32px;
+    column-gap: 32px;
+    text-align: justify;
+}
+
+.blogPost img {
+    margin: 22px 0;
+    box-shadow: 3px 3px 7px #615b5b;
+    border-radius: 5px;
+    width: 140px;
+    height: 140px;
+    float: right;
+    margin-left: 20px;
+}
+
+
+/*------------------------------
+     COMENTARIOS PUBLICADOS
+------------------------------*/
+
+#comments {
+    margin-top: 21px;
+    padding-top: 22px;
+    border-top: 1px solid #d7d7d7;
+    width: 100%;
+}
+
+#comments article {
+    display: table;
+    padding: 22px;
+}
+
+#comments article:nth-child(odd) {
+    padding: 21px;
+    background: #E3E3E3;
+    border: 1px solid #d7d7d7;
+    border-radius: 11px;
+}
+
+#comments article header {
+    display: table-cell;
+    width: 220px;
+    padding-right: 22px;
+}
+
+#comments article header a {
+    display: block;
+    font-weight: bold;
+    color: #000;
+}
+
+#comments article header a:hover {
+    text-decoration: none;
+}
+
+#comments article p {
+    padding: 0;
+}
+
+
+/*------------------------------
+ FORMULARIO DE PUBLICACION COMENTARIOS
+------------------------------*/
+
+form {
+    margin-top: 21px;
+    padding-top: 22px;
+    border-top: 1px solid #5f4e4e;
+}
+
+form p {
+    display: table;
+    margin-bottom: 22px;
+    padding: 0 22px;
+}
+
+form label {
+    display: table-cell;
+    width: 140px;
+    padding-right: 20px;
+    text-align: right;
+    font-weight: bold;
+    vertical-align: top;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="url"] {
+    display: table-cell;
+    width: 300px;
+    height: 20px;
+    border: 1px solid #d7d7d7;
+    border-radius: 3px;
+}
+
+form input[type="submit"] {
+    display: table-cell;
+    width: 80px;
+    height: 30px;
+    background-color: #222;
+    border-radius: 5px;
+    color: #f0f0e6;
+    margin-left: 162px;
+}
+
+form textarea {
+    width: 300px;
+    height: 100px;
+    border: 1px solid #d7d7d7;
+}
+
+
+
+
+/*------------------------------
+     BARRA LATERAL
+------------------------------*/
+
+aside section {
+    margin: 22px 0 0 22px;
+    padding: 11px 22px;
+    border-radius: 11px;
+}
+
+aside section ul {
+    margin: 0 0 0 22px;
+    list-style: none;
+}
+
+aside section ul li a {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+}
+
+aside section ul li a:hover {
+    text-decoration: underline;
+}
+
+
+
+/*------------------------------
+       PIE DE PAGINA
+------------------------------*/
+
+footer {
+    display: inline-block;
+    left: 0;
+    background: #181818;
+    width: 100%;
+}
+footer div {
+    margin: 0 auto;
+    padding: 44px 0;
+    width: 940px;
+    color: #ffffff;
+    
+}
+
+footer div section {
+    display: table-cell;
+    width: 300px;
+}
+
+footer div #about {
+    padding-right: 40px;
+    padding-left: 10px;
+    text-align: justify;
+}
+
+footer div #blogroll {
+    text-align: justify;
+    padding-left: 40px;
+}
+
+footer h3 {
+    color: #FFF;
+    padding-left: 40px;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+footer a:hover {
+    color: #FFF;
+    text-decoration: none;
+}
+
+footer ul {
+    margin: 0 0 0 40px;
+    list-style: square;
+    color: #ffffff;
+}
+
+footer ul li a {
+    display: block;
+}
+@media screen and (min-width:780px) {
+    .encabezado{
+        width: 100%;
+    }
+
+}
+@media screen and (max-width:400px) {
+    .footer{
+        display: none;
+    }
+}
