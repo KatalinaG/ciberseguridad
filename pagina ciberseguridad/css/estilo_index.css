@@ -1,139 +1,397 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Outfit', sans-serif;
-}
+ /*---------------
+CONFIGURACION GENERAL
+------------------
+*/
+ /*seleccione la tipografia para exportar la fuente desde google font https://fonts.google.com/
+ importela*/
+ 
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;500&display=swap');
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     /*permite incluir el relleno y el borde en el ancho y alto total de un elemento*/
+     font-family: 'Montserrat', sans-serif;
+ }
+ 
+ html {
+     /* configuracion de desplazamiento con CSSOM */
+     scroll-behavior: smooth;
+     /* La scroll-behavior es la propiedad que especifica si animar suavemente la posición de desplazamiento, en lugar de un salto directo, cuando el usuario hace clic en un enlace dentro de un cuadro desplazable.
+     aprendiz puede consultar en https://www.w3schools.com/cssref/pr_scroll-behavior.php*/
+ }
+ 
+ body {
+     display: flex;
+     overflow: hidden;
+ }
+ 
+ .bloque {
+     width: 100vw;
+     padding-top: 50px;
+     flex-shrink: 0;
+     height: 100vh;
+ }
+ /*---------------
+MENU DE NAVEGACION
+------------------
+*/
+ 
+ header {
+     position: fixed;
+     bottom: 0;
+     padding: 10px 0;
+     width: 100%;
+     background-image: linear-gradient( to right, #6fe4c6, rgb(91, 167, 120), #c1e6d1);
+     text-align: center;
+ }
+ 
+ header a {
+     display: inline-block;
+     margin: 0 20px;
+     text-decoration: none;
+     color: rgb(255, 255, 255);
+     padding: 10px;
+ }
+ 
+ .selected {
+     color: rgb(30, 128, 79);
+     transition: .3s;
+ }
+ 
+ header nav span {
+     display: inline-block;
+     height: 40px;
+     width: 40px;
+     line-height: 40px;
+     border: 2px solid #fafafa;
+     border-radius: 50%;
+ }
+ 
+ header nav span i {
+     color: #f8fafd;
 
-html{
-    scroll-behavior: smooth;
-}
-body{
-    display: flex;
-    overflow: hidden;
-}
-.bloque{
-    width: 100vw;
-    padding-top: 50px;
-    flex-shrink: 0;
-    height: 100vh;
-}
+ }
+ /*---------------
+CONGIGURACION PAGINA INICIO
+------------------
+*/
+ 
+ #intro {
+     background-image: url(/img/sitio/imgg.jpg);
+     background-size: cover;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+ #intro .contenido h2 {
+     font-size: 4rem;
+     text-align: center;
+     color: #e7e7dd;
+     text-shadow: 3px 3px 10px #494646;
+     position: relative;
+     animation: 3s aparecer forwards;
+ }
+ 
+ @keyframes aparecer {
+     0% {
+         opacity: 0;
+         top: 50px;
+     }
+     100% {
+         opacity: 1;
+         top: 0px;
+     }
+ }
+ /*---------------
+CONGIGURACION PAGINA DELITOS
+------------------
+*/
+ #delitos {
+     background-color: #252525;
+ }
+ 
+ #delitos h2 {
+    padding: 70px;
+     text-align: center;
+     margin-bottom: 20px;
+     font-size: 40px;
+     color: white;
+     font-family: 'Outfit';
+ }
+ 
+ #delitos .contenido {
+     max-width: 90%;
+     margin: auto;
+     display: flex;
+     justify-content: space-between;
+ }
+ 
+ #delitos .contenido .delito1 {
+     background-image:  url(/img/sitio/1.jpg);
+ }
+ 
+ #delitos .contenido .delito2 {
+     background-image: url(/img/sitio/2.jpg);
+ }
+ 
+ #delitos .contenido .delito3 {
+     background-image: url(/img/sitio/3.jpg);
+ }
+ 
+ #delitos .contenido .item {
+     width: 25%;
+     height: 400px;
+     background-size: cover;
+     background-position: center center;
+     margin: 0 10px;
+     transition: .7s;
+     position: relative;
+     border-radius: 5px;
+     overflow: hidden;
+     cursor: pointer;
+ }
+ 
+ #delitos .contenido .item:hover {
+     width: 90%;
+ }
+ 
+ #delitos .contenido .overlay {
+     position: absolute;
+     background: linear-gradient(to bottom, transparent 0.3%, black);
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+ }
 
-/*MENU DE NAVEGACION*/
-
-header{
-    position: fixed;
-    bottom: 0;
-    padding: 10px 0;
-    width: 100%;
-    background-image: linear-gradient(to right, rgb(166, 233, 177), rgb(58, 158, 133), rgb(43, 212, 128));
-    text-align: center;
+ #delitos .contenido .overlay .info{
+    position: absolute; 
+    padding: 30px;
+    color: #bbd8c2;
+    text-align: justify;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
 }
-
-header a{
-    display: inline-block;
-    margin: 0, 20px;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    padding: 10px;
-}
-
-.selected{
-    color: rgb(255, 255, 255);
-    transition: .3s;
-
-    
-}
-
-header nav span{
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    line-height: 40px;
-    border: 2px solid white;
-    border-radius: 50%;
-    color: white;
-}
-header span{
-    display: inline-block;
-}
-/*Pagina Inicicio*/
-
-#intro{
-    background-image: url();
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#intro .contenido h2{
-    background-image: url();
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-@keyframes aparecer {
-    0%{
-        opacity: 0;
-        top: 50px;
-    }
-    100%{
-        opacity: 1;
-        top: 0px;
-    }
-    
-}
-
-/*Pagina Delitos*/
-
-#delitos{
-    background-color: white;
-}
-
-#delitos{
-    text-align: center;
-    margin-bottom: 20px;
-}
-#delitos .contenido{
-    max-width: 90%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-
-}
-
-#delitos .contenido .delito1{
-    background-image: url();
-}
-
-#delitos .contenido .delito2{
-    background-image: url();
-}
-
-#delitos .contenido .delito3{
-    background-image: url();
-}
-
-#delitos .contenido .delito4{
-    background-image: url();
-}
-
-#delitos .contenido .delito5{
-    background-image: url();
-}
-
-/*pagina tips*/
-
-#tips{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(transparent, rgb(136, 180, 164));
-    
-}
+ 
+ #delitos .contenido .item .titulo {
+     position: absolute;
+     bottom: -10px;
+     letter-spacing: 2px;
+     left: 50%;
+     transform: translateX(-50%);
+     color: #e7e7dd;
+     font-style: 20px;
+     background-color: rgb(26, 27, 26);
+     padding: 10px 0;
+     width: 100%;
+     opacity: 0;
+     transition: .3s;
+ }
+ 
+ #delitos .contenido .item:hover .titulo {
+     bottom: -20px;
+     opacity: 1;
+ }
+ /*---------------
+CONGIGURACION PAGINA TIPS
+------------------
+*/
+ 
+ #tips {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     background: linear-gradient(transparent, black), url(/img/banner2/img3.jpg);
+     background-size: cover;
+     color: #e2dddd;
+ }
+ 
+ #tips .icon {
+     font-size: 40px;
+     font-weight: bold;
+     margin-top: 100px;
+ }
+ 
+ #tips .icon span {
+     color: rgb(128, 214, 143);
+     font-size: 30px;
+     display: inline-block;
+     width: 50px;
+     height: 50px;
+     border: 3px solid rgb(128, 214, 143);
+     border-radius: 90%;
+     line-height: 40px;
+ }
+ 
+ #tips .icon i {
+     color: rgb(128, 214, 143);
+     margin-left: 7px;
+ }
+ 
+ #tips p {
+     width: 90%;
+     margin: 20px;
+     text-align: justify;
+ }
+ 
+ #tips h2 {
+     text-align: center;
+     margin-bottom: 20px;
+ }
+ 
+ #tips .contenido {
+     max-width: 90%;
+     margin: auto;
+     display: flex;
+     justify-content: space-between;
+ }
+ 
+ #tips .contenido .tips1 {
+     background-image: url(/img/sitio/tips1.jpg);
+ }
+ 
+ #tips .contenido .tips2 {
+     background-image: url(/img/sitio/tips2.jpg);
+ }
+ 
+ #tips .contenido .tips3 {
+     background-image: url(/img/sitio/tips3.jpg);
+ }
+ 
+ #tips .contenido .item {
+     width: 25%;
+     height: 400px;
+     background-size: cover;
+     background-position: center center;
+     margin: 0 10px;
+     transition: .7s;
+     position: relative;
+     border-radius: 5px;
+     overflow: hidden;
+     cursor: pointer;
+ }
+ 
+ #tips .contenido .item:hover {
+     width: 90%;
+ }
+ 
+ #tips .contenido .overlay {
+     position: absolute;
+     background: linear-gradient(to bottom, transparent 80%, black);
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+ }
+ 
+ #tips .contenido .item .titulo {
+     position: absolute;
+     bottom: -10px;
+     letter-spacing: 2px;
+     left: 50%;
+     transform: translateX(-50%);
+     color: #e7e7dd;
+     font-style: 20px;
+     background-color: black;
+     padding: 10px 0;
+     width: 100%;
+     opacity: 0;
+     transition: .3s;
+ }
+ 
+ #tips .contenido .item:hover .titulo {
+     bottom: -20px;
+     opacity: 1;
+ }
+ /*---------------
+CONGIGURACION PAGINA CONTACTENOS
+------------------
+*/
+ 
+ #contactenos {
+     background: linear-gradient(transparent, black), url(/img/banner2/img2.jpg);
+     background-size: cover;
+ }
+ 
+ #contactenos .contenido {
+     padding-top: 20px;
+     max-width: 1100px;
+     margin: auto;
+     display: flex;
+     justify-content: space-around;
+ }
+ 
+ #contactenos .contenido .datos {
+     color: #f8fafd;
+     width: 40%;
+     padding-top: 50px;
+ }
+ 
+ #contactenos .contenido .datos .item {
+     margin-bottom: 70px;
+     display: flex;
+ }
+ 
+ #contactenos .contenido .datos .icono {
+     font-size: 30px;
+     margin-right: 20px;
+ }
+ 
+ #contactenos .contenido .formulario {
+     background-color: #bcbdbc;
+     width: 40%;
+     height: 460px;
+     padding-left: 40px;
+     padding-right: 40px;
+     color: #f3ecec;
+ }
+ 
+ .formulario h3 {
+     color: #ffffff;
+     text-align: center;
+     padding: 10px;
+     font-size: 30px;
+ }
+ 
+ #contactenos .contenido .formulario .info {
+     margin-bottom: 20px;
+ }
+ 
+ .info label {
+     display: block;
+     color: #e3e6e3;
+     font-weight: bold;
+ }
+ 
+ .info input {
+     display: block;
+     width: 100%;
+     border: none;
+     border-bottom: 1px solid #a1a8a1;
+     padding: 5px;
+     outline: none;
+     background-color: #cfd1d0;
+ }
+ 
+ .info textarea {
+     width: 80px;
+     width: 100%;
+     border: none;
+     border-bottom: 1px solid #a1a8a1;
+     outline: none;
+     background-color: #cfd1d0;
+ }
+ 
+ .formulario .btn_enviar {
+     background-color: #379c7a;
+     display: block;
+     border: none;
+     color: #e2dddd;
+     padding: 7px;
+     font-size: 16px;
+     font-weight: bold;
+ }

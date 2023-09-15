@@ -1,119 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--librerias de estilo para el menu de navegacion buscar el cdn directamente de font-awesome https://cdnjs.com/libraries/font-awesome copie el tag completo-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Whatsegurity</title>
+    <link rel="icon" href="img/sitio/logo.png">
     <link rel="stylesheet" href="css/estilo_index.css">
-    <link rel="icon" href="img/logo.png">
-    <title>Ciberseguridad</title>
+    
 </head>
+
 <body>
+    <!--maquetacion para el menu de navegacion-->
     <header>
         <nav>
-            <a href="#intro" class="selected">Inicio</a>
-            <a href="#delitos" class="selected">Delitos</a>
+            <a href="#intro" onclick="seleccionar(this)" class="selected">Inicio</a>
+
+            <a href="#delitos" onclick="seleccionar(this) ">Delitos</a>
             <span>
-                <i class="fa-solid fa-shield-halved fa-bounce"></i>
+            <!--acceda a la pagina oficial de font awesome  https://fontawesome.com/ busque un icono de ciberseguridad--> 
+            <i class="fa-solid fa-shield-halved fa-bounce"></i>
             </span>
-            <a href="#tips" class="selected">Tips</a>
-            <a href="#contactos" class="selected">Contactanos</a>
+            <a href="#tips" onclick="seleccionar(this)">Tips</a>
+            <a href="#contactenos" onclick="seleccionar(this)">Contactenos</a>
         </nav>
     </header>
+    <!--contenido de la pagina de inicio de ciberseguridad-->
     <section id="intro" class="bloque">
-        <div id="contenido">
-            <h2>Whattsapp Un Nuevo Mundo</h2>
-        </div>
-
-    </section id="delitos" class="bloque">
         <div class="contenido">
-            <div class="icon">
-               <h2>Delitos Principales</h2>
-                <span>
-                    <i class="fa-solid fa-palette fa-beat-fade"></i>
-                </span>
+            <h2>WhatsApp Un Nuevo Mundo...</h2>
+        </div>
+    </section>
+    <!--contenido de la pagina de delitos-->
+    <section id="delitos" class="bloque">
+        <h2>Delitos Principales</h2>
+        <div class="contenido">
+
+            <div class="item delito1">
+                <div class="overlay">
+                    <p class="info">La suplantación de identidad en WhatsApp, aplicación en la que se pueden recuperar mensajes eliminados sin descargar alguna otra, es una forma de fraude que consiste en robar la cuenta de un usuario y hacerse pasar por él para engañar a sus contactos. Los ciberdelincuentes pueden acceder a la cuenta de WhatsApp de una víctima si consiguen el código de verificación que se envía por SMS o llamada al instalar la aplicación en otro dispositivo.
+                    </p>
+                </div>
+                <h2 class="titulo">Suplantacion ID</h2>
+            </div>
+
+
+            <div class="item delito2">
+                <div class="overlay">
+                    <p class="info">El control de la cuenta de WhatsApp de la víctima estaría en manos del ciberdelincuente y con ello el acceso a la información y a todos tus contactos.
+                    </p>
+                </div>
+                
+                    <h2 class="titulo">Engaños QR</h2>
+            
+            </div>
+            <div class="item delito3">
+                <div class="overlay">
+                    <p class="info"> La vulnerabilidad en Whatsapp tenía su origen en la función de filtro de imagen de la app, un proceso mediante el cual se modifican los píxeles de la imagen original para conseguir algunos efectos visuales, como el desenfoque o la nitidez
+                    </p>
+                </div>
+                
+                    <h2 class="titulo">Vulnerabilidades</h2>
                 
             </div>
-        <div class="contenido">
-            <p>Aquellos en los que se le da al lector una serie de contenidos o informaciones específicas junto con las herramientas conceptuales o contextuales para comprenderlos, es decir, se le explica algo concreto. Por ejemplo: un informe técnico, una página de enciclopedia.
-                 
-            </p>
-        </div>
+    </section>
+    <!--contenido tips-->
     <section id="tips" class="bloque">
         <div class="contenido">
-            <div class="overlay"></div>
-            <a href=""></a>
-            <h2 class="titulo">Aliados</h2>
+            <div class="icon">
+                ¿Cómo Prevenir Amenazas de WhatsApp?
+                <span>
+                <i class="fa-solid fa-lock fa-shake"></i>
+            </span>
+            </div>
+            <div class="contenido">
+                <p> Parte de la tranquilidad que se ha dado a los usuarios frente a este cibercrimen, son las medidas que han tomados los desarrolladores de apps, entre ellas prohíben explícitamente los precios irrazonables, las suscripciones de cebo y cambio y las estafas, como en el caso de pautas de Apple; al tiempo que, se han endurecido las políticas de Google Play.
+                    Revise bien las suscripciones, mire bien cada registro y cada ‘acepto’, es importante que esté alerta frente a estos temas y evite situaciones inseguras a un solo clic.
+                </p>
 
+                <div class="item tips1">
+                    <div class="overlay"></div>
+                    <a href="./workdsho.html">
+                        <h2 class="titulo">Vinculación</h2>
+                    </a>
+                </div>
+
+                <div class="item tips2">
+                    <div class="overlay"></div>
+                    <a href="./workdsho.html">
+                        <h2 class="titulo">Prevención</h2>
+                    </a>
+                </div>
+                <div class="item tips3">
+                    <div class="overlay"></div>
+                    <a href="./workdsho.html">
+                        <h2 class="titulo">Pin</h2>
+                    </a>
+                </div>
+
+            </div>
     </section>
-    <section id="contactos" class="bloque">
+    <!--contenido contactenos-->
+    <section id="contactenos" class="bloque">
         <div class="contenido">
+            <!--datos-->
             <div class="datos">
                 <div class="item">
                     <div class="icono">
                         <i class="fa-solid fa-location-dot"></i>
                     </div>
-                <div class="datos_dir">
-                    <h3>Direccion</h3>
-                    <h4>Cra 18 G # 15-70, Soacha, Cundinarmca</h4>
+                    <div class="datos__dir">
+                        <h3>Direccion</h3>
+                        <h4>calle 30 # 2este-90, Soacha, Cundinamarca</h4>
+                    </div>
                 </div>
 
                 <div class="item">
                     <div class="icono">
                         <i class="fa-solid fa-phone"></i>
                     </div>
-                <div class="datos_tel">
-                    <h3>Telefono</h3>
-                    <h4>8408797</h4>
+                    <div class="datos__tel">
+                        <h3>Telefono</h3>
+                        <h4>(57)-601-8794523</h4>
+                    </div>
                 </div>
-                
+
                 <div class="item">
                     <div class="icono">
                         <i class="fa-solid fa-envelope"></i>
                     </div>
-                <div class="datos_email">
-                    <h3>Email</h3>
-                    <h4>Artesanart@gmail.com</h4>
+                    <div class="datos__email">
+                        <h3>Email</h3>
+                        <h4>cibersecurityco@securitycolombia.co</h4>
+                    </div>
                 </div>
 
                 <div class="item">
                     <div class="icono">
                         <i class="fa-brands fa-whatsapp"></i>
                     </div>
-                <div class="datos_whats">
-                    <h3>Whatsapp</h3>
-                    <h4>3204811898</h4>
+                    <div class="datos__whass">
+                        <h3>Whatsapp</h3>
+                        <h4>3233965626</h4>
+                    </div>
                 </div>
+            </div>
 
             <div class="formulario">
                 <h3>Escribenos</h3>
                 <form action="#">
                     <div class="info">
-                        <label>Nombre</label>
+                        <label>Nombre</label> 
                         <input type="text" name="nom">
                     </div>
-
                     <div class="info">
-                        <label>Apellido</label>
+                        <label>Apellidos</label> 
                         <input type="text" name="ape">
                     </div>
-
                     <div class="info">
-                        <label>Email</label>
-                        <input type="text" name="ema">
+                        <label for="">Email</label>
+                        <input type="email" name="correo">
                     </div>
-
                     <div class="info">
-                        <label for="">Mensaje</label>
-                        <textarea name="" id="" cols="30" rows="7"></textarea>
+                        <label for="">Mensaje</label> 
+                        <textarea name="mensaje" id="" cols="30" rows="7"></textarea>
                     </div>
-                    
-                    <input type="submit" class="btn-enviar" value="Enviar"> 
-                    </div>
+                    <input type="submit" class="btn_enviar" value="Enviar" onclick="validar()">
                 </form>
-
             </div>
         </div>
     </section>
+   <!--llamado del archivo de javascript para identificar la opcion selecionada-->
+    <script src="./js/sitio.js"></script> 
 </body>
 </html>
